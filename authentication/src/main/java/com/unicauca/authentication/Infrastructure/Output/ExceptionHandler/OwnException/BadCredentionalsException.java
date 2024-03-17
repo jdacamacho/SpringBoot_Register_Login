@@ -2,6 +2,8 @@ package com.unicauca.authentication.Infrastructure.Output.ExceptionHandler.OwnEx
 
 import com.unicauca.authentication.Infrastructure.Output.ExceptionHandler.ExceptionStructure.ErrorCode;
 
+import lombok.Getter;
+
 @Getter
 public class BadCredentionalsException extends RuntimeException {
     private final String messageKey;

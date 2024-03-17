@@ -1,5 +1,9 @@
 package com.unicauca.authentication.Infrastructure.Output.ExceptionHandler.OwnException;
 
+import com.unicauca.authentication.Infrastructure.Output.ExceptionHandler.ExceptionStructure.ErrorCode;
+
+import lombok.Getter;
+
 @Getter
 public class EntityExistsException extends RuntimeException{
     private final String messageKey;
