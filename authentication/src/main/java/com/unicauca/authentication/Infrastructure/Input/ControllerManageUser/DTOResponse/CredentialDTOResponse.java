@@ -5,13 +5,13 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class CredentionalDTOResponse {
+public class CredentialDTOResponse {
     private long idCredential;
     private String userName;
     private String password;
     private UserDTOResponse objUser;
 
-    public CredentionalDTOResponse(){
+    public CredentialDTOResponse(){
 
     }
 }

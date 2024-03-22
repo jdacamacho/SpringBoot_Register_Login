@@ -25,15 +25,15 @@ import com.unicauca.authentication.Application.Input.ManageUserCUIntPort;
 import com.unicauca.authentication.Domain.Models.User;
 import com.unicauca.authentication.Infrastructure.Input.ControllerManageUser.DTORequest.UserDTORequest;
 import com.unicauca.authentication.Infrastructure.Input.ControllerManageUser.DTOResponse.UserDTOResponse;
-import com.unicauca.authentication.Infrastructure.Input.ControllerManageUser.Mappers.UserMapperInfrastuctureDomain;
+import com.unicauca.authentication.Infrastructure.Input.ControllerManageUser.mappers.UserMapperInfrastuctureDomain;
 
 import jakarta.validation.Valid;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/apiUser")
 @Validated
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserRestController {
     private final ManageUserCUIntPort userCU;
     private final UserMapperInfrastuctureDomain mapper;
@@ -43,7 +43,7 @@ public class UserRestController {
     public ResponseEntity<List<UserDTOResponse>> listUsers(){
         List<User> users = this.userCU.listUsers();
         ResponseEntity<List<UserDTOResponse>> objResponse = new ResponseEntity<List<UserDTOResponse>>(
-            this.mapper.MapUsersToResponse(users),HttpStatus.OK);
+            this.mapper.mapUsersToResponse(users),HttpStatus.OK);
         return objResponse;
     }
 

@@ -13,7 +13,7 @@ public class UserDTOResponse {
     private long numberDocument;
     private String names;
     private String lastNames;
-    private CredentionalDTOResponse credential;
+    private CredentialDTOResponse credential;
     private List<RoleDTOResponse> roles;
 
     public UserDTOResponse(){
